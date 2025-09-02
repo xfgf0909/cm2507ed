@@ -1,6 +1,8 @@
 name: 混淆最新版本源码
 on:
-    workflow_dispatch:
+  schedule:
+    - cron: '0 20 * * 1'   # 每周一 20:00 UTC → 北京时间周二 04:00
+  workflow_dispatch:      # 允许手动触发
 
 jobs:
   obfuscate:
